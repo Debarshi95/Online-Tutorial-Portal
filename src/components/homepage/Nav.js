@@ -1,30 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import LoggedInLinks from "./LoggedInLinks";
 import LoggedOutLinks from "./LoggedOutLinks";
-class Nav extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      isLoggedIn: ""
-    };
-  }
-
-  render() {
-    let LoginState = this.state.isloggedIn ? (
-      <div>
-        <ul>
-          <LoggedInLinks />
-        </ul>
-      </div>
-    ) : (
-      <div>
-        <ul>
-          <LoggedOutLinks />
-        </ul>
-      </div>
-    );
-    return <div>{LoginState}</div>;
-  }
+function Nav(props) {
+	return props.resState === "USER" ? (
+		<LoggedInLinks {...props} />
+	) : props.resState === "TUTOR" ? (
+		<LoggedInLinks {...props} />
+	) : (
+		<LoggedOutLinks />
+	);
 }
 export default Nav;
