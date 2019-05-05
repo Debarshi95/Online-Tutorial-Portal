@@ -1,0 +1,119 @@
+/* Createpost.js styles */
+.createpost-body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.createpost-card {
+  float: right;
+  width: 75%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+.labels {
+  margin-left: 90px;
+  font-size: 17px;
+}
+.textarea {
+}
+.post-input {
+  width: 70%;
+  height: 35px;
+  margin: 50px 0 20px 55px;
+}
+.post-text {
+  margin-left: 30px;
+  width: 70%;
+  height: 400px;
+}
+.post-submit-btn {
+  margin-left: 480px;
+  margin-top: 10px;
+  width: 90px;
+  height: 30px;
+  background-color: rgb(88, 159, 252);
+  border-radius: 2px;
+  border: rgb(88, 159, 252);
+  outline: none;
+}
+
+/* AdminLogin.js styles */
+
+.admin-login-body {
+  background-color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+.admin-login-card {
+  padding: 100px 50px;
+  width: 380px;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 50px 0 0 450px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.952);
+  overflow: hidden;
+}
+
+.admin-login-card h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
+  color: #fff;
+}
+
+.admin-login-card input[type="submit"] {
+  width: 50%;
+  display: block;
+  margin-left: 70px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.admin-login-card input[type="text"],
+input[type="password"] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 15px;
+  background: #fff;
+  border: 1px #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  border-radius: 20px;
+  padding: 0 18px;
+  outline: none;
+}
+
+.admin-login-card input[type="text"]:hover,
+input[type="password"]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.admin-login {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.admin-login-submit {
+  border-radius: 40px;
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  background-color: #18208baf;
+  outline: none;
+}
+
+.admin-login-submit:hover {
+  border: 0px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  background-color: #1a228d;
+}

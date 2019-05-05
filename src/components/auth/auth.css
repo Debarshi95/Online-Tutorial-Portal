@@ -1,0 +1,131 @@
+/*ContactUs.js */
+.contact-body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(207, 250, 143);
+	height: 90vh;
+	overflow: hidden;
+}
+.conact-card {
+	padding: 100px 50px;
+	width: 600px;
+	height: 450px;
+	background-color: #f7f7f7;
+	margin: 50px 0 0 350px;
+	border-radius: 2px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+
+/* Login.js */
+.card {
+	width: 380px;
+	margin: 50px 0 0 450px;
+	height: 450px;
+}
+.card-title {
+	padding-top: 40px;
+	text-align: center;
+}
+.card-body {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.726);
+}
+.form-group {
+	padding: 0px 20px 0 20px;
+}
+.custom-control {
+	margin: 0px 20px 0 20px;
+}
+.btn {
+	margin-top: 10px;
+}
+/* Register.js */
+
+.register-body {
+	background-color: rgba(116, 87, 163, 0.164);
+	height: 100vh;
+	overflow: hidden;
+}
+.register-card {
+	padding: 20px 35px 10px 35px;
+	width: 400px;
+	height: 500px;
+	margin: 30px 0 0 450px;
+	background-color: #f7f7f7;
+	border-radius: 2px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+
+.register-card h1 {
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.3em;
+}
+.register-card input[type="text"],
+input[type="email"],
+input[type="password"] {
+	height: 44px;
+	font-size: 16px;
+	width: 100%;
+	margin-bottom: 10px;
+	background: #fff;
+
+	border-radius: 30px;
+	padding: 0 18px;
+	outline: none;
+}
+
+.register-card input[type="text"],
+input[type="email"],
+input[type="password"]:hover {
+	border: 1px solid #d9d9d9;
+}
+.register-card input[type="submit"] {
+	width: 100%;
+	display: block;
+	margin-bottom: 5px;
+	position: relative;
+}
+.radio-btn {
+	margin: -18px 0px 13px 70px;
+}
+.register-button {
+	text-align: center;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	font-weight: 700;
+	height: 36px;
+	padding: 0 8px;
+}
+.register-button-submit {
+	border: 0px;
+	color: #fff;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+	background-color: #536ab6;
+}
+.register-button-submit:hover {
+	border: 0px;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	background-color: #082d7cf5;
+}
+.register-card a {
+	text-decoration: none;
+	color: #666;
+	font-weight: 400;
+	text-align: center;
+	display: inline-block;
+	opacity: 0.6;
+	transition: opacity ease 0.5s;
+}
+
+.register-card a:hover {
+	opacity: 1;
+}
+
+.register-help {
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+}
