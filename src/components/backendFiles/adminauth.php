@@ -26,4 +26,11 @@ if ($conn == TRUE) {
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 mysqli_close($conn);
+>>>>>>> 1a3a825b00cc3a1286d2433f4b8ae25d290b5000
+=======
+mysqli_close($conn);
+>>>>>>> 1a3a825b00cc3a1286d2433f4b8ae25d290b5000

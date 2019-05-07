@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "../../homepage/Nav";
 
-
 function CLanguage() {
   return (
     <div>

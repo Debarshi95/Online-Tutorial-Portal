@@ -1,0 +1,12 @@
+.javascriptsidebar {
+  float: left;
+  width: 20%;
+  background-color: rgb(247, 248, 190);
+  height: 600px;
+  padding-left: 20px;
+}
+.javascriptsidebar li {
+  text-align: left;
+  padding: 5px;
+  font-size: 16px;
+}
