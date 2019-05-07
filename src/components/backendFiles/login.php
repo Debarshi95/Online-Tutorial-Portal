@@ -2,15 +2,9 @@
 
 include 'Cors.php';
 
-
-
 $user = $_GET['username'];
 $pass = $_GET['userpass'];
 $isLogged = $_GET['isLoggedIn'];
-
-
-
-
 
 $conn = new mysqli("localhost", "root", "", "ReactPhp");
 if ($conn == TRUE) {

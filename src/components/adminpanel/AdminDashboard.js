@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import CreatePost from "./CreatePost";
+import AdminDashSidebar from "./AdminDashSidebar";
 
 export class AdminDashboard extends Component {
-  render() {
-    return (
-      <div>
-        <CreatePost />
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div>
+				<AdminDashSidebar />
+			</div>
+		);
+	}
 }
 
 export default AdminDashboard;

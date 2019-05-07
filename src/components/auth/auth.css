@@ -6,15 +6,13 @@
 	height: 90vh;
 	overflow: hidden;
 }
-.conact-card {
-	padding: 100px 50px;
+.contact-card {
 	width: 600px;
 	height: 450px;
-	background-color: #f7f7f7;
-	margin: 50px 0 0 350px;
-	border-radius: 2px;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	overflow: hidden;
+	margin-left: 400px;
+	margin-top: 60px;
+	border: solid 1px;
+	border-radius: 3px;
 }
 
 /* Login.js */
@@ -24,7 +22,7 @@
 	height: 450px;
 }
 .card-title {
-	padding-top: 40px;
+	margin-top: 30px;
 	text-align: center;
 }
 .card-body {

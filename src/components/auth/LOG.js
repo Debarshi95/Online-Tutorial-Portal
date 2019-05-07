@@ -6,9 +6,9 @@ function LOG(props) {
 		<div className="card">
 			<div className="card-body">
 				<h4 className="card-title">Member Login</h4>
-				<form onSubmit={props.userLogin} novalidate>
+				<form onSubmit={props.userLogin}>
 					<div className="form-group">
-						<label for="username">Username</label>
+						<label htmlFor="username">Username</label>
 						<input
 							type="text"
 							className="form-control"
@@ -20,7 +20,7 @@ function LOG(props) {
 						/>
 					</div>
 					<div className="form-group">
-						<label for="password">Password</label>
+						<label htmlFor="password">Password</label>
 						<input
 							type="passw"
 							className="form-control"
@@ -40,7 +40,7 @@ function LOG(props) {
 							value={props.isUserChecked}
 							onChange={props.check}
 						/>
-						<label className="custom-control-label" for="customSwitch1">
+						<label className="custom-control-label" htmlFor="customSwitch1">
 							Student
 						</label>
 					</div>
@@ -53,7 +53,7 @@ function LOG(props) {
 							value={props.isTutorChecked}
 							onChange={props.check}
 						/>
-						<label className="custom-control-label" for="customSwitch2">
+						<label className="custom-control-label" htmlFor="customSwitch2">
 							Tutor
 						</label>
 					</div>
