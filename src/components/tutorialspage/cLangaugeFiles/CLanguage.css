@@ -1,0 +1,7 @@
+.csidebar {
+  float: left;
+  width: 20%;
+  background-color: rgb(247, 248, 190);
+  height: 600px;
+  padding: 10px;
+}

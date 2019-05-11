@@ -1,0 +1,71 @@
+/* Nav.js styles */
+.navbar {
+	height: 70px;
+}
+.nav-item {
+	font-size: 15px;
+	margin-right: 10px;
+}
+
+.nav-item:hover {
+	background-color: rgb(129, 192, 66);
+	color: white;
+	border-radius: 3px;
+}
+
+/* Content.js styles */
+
+.jumbotron {
+	height: 500px;
+}
+
+/* .main {
+	margin-top: 80px;
+	margin-left: 160px;
+	float: left;
+}
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	height: 200px;
+	width: 200px;
+	margin-left: 100px;
+	float: left;
+	border-radius: 3px;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.main1 {
+	margin-top: 400px;
+	margin-left: 160px;
+}
+img {
+	width: 100%;
+}
+.padding {
+	padding: 20px;
+}
+.h1 {
+	margin-top: 140px;
+	text-align: center;
+}
+h4 {
+	text-align: center;
+}
+.image {
+	opacity: 0.8;
+} */
+
+/* About.js styles */
+
+/* .main3 {
+	background-color: rgb(214, 214, 22);
+	width: 100%;
+	margin-top: auto;
+	height: 555px;
+}
+.list {
+	margin-left: 100px;
+} */

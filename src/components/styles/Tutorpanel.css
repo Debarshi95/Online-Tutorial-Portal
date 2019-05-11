@@ -1,0 +1,22 @@
+/*TutorSidebar styles*/
+.tutor-sidebar {
+	background-color: darkorchid;
+	width: 35%;
+	text-align: center;
+	height: 100vh;
+}
+.side-link {
+	padding: 10px;
+	color: white;
+}
+.side-link-active {
+	background-color: rgba(239, 234, 241, 0.144);
+}
+.side-link:hover {
+	background-color: rgba(178, 58, 189, 0.377);
+	text-decoration: none;
+	color: white;
+}
+.top-link {
+	padding-top: 30px;
+}
