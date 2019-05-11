@@ -1,5 +1,5 @@
 # BCA 6th Sem Major Project
 
-## Online Tutorials and progrmming website
+## Online Tutorials and programming website
 
 #### Contributors- Bishal Bhattacharjee and Debarshi Bhattacharjee...
