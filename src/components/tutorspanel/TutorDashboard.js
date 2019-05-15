@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TutorPosts from "./TutorPosts";
 import TutorSidebar from "./TutorSidebar";
-import "../styles/Tutorpanel.css";
+import "./Tutorpanel.css";
 
 class TutorDashboard extends Component {
 	render() {

@@ -1,25 +1,24 @@
-import React from "react";
-import html from "./Images/html.png";
-import css from "./Images/css.png";
-import php from "./Images/php.png";
-import javascript from "./Images/javascript.png";
-import bgimage from "./Images/bgimage3.jpg";
-import c from "./Images/c.png";
-import java from "./Images/java.png";
+import React, { Component } from "react";
+import axios from "axios";
 
-function Body() {
-	return (
-		<div>
-			<div className="jumbotron jumbotron-fluid">
-				<div className="container">
-					<h1 className="display-4">Fluid jumbotron</h1>
-					<p className="lead">
-						This is a modified jumbotron that occupies the entire horizontal
-						space of its parent.
+class Body extends Component {
+	render() {
+		return (
+			<div>
+				<div class="jumbotron jumbotron-fluid jumbotron-height">
+					<h1 class="display-4">Hello, world!</h1>
+					<p class="lead">
+						This is a simple hero unit, a simple jumbotron-style component for
+						calling extra attention to featured content or information.
 					</p>
 				</div>
+				<div className="middle-body">
+					<h2>Body</h2>
+
+					<div className="card">hi</div>
+				</div>
 			</div>
-		</div>
-	);
+		);
+	}
 }
 export default Body;
