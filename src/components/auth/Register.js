@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./auth.css";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 class Register extends Component {
 	constructor() {
 		super();
@@ -18,7 +20,7 @@ class Register extends Component {
 	}
 	handleChange = e => {
 		this.setState({
-			[e.target.id]: e.target.value
+			[e.target.name]: e.target.value
 		});
 	};
 	check = e => {
@@ -26,7 +28,7 @@ class Register extends Component {
 			[e.target.name]: e.target.checked
 		});
 	};
-	handleRegisterSubmit = e => {
+	handleRegister = e => {
 		e.preventDefault();
 
 		const firstname = this.state.firstname;
@@ -62,91 +64,177 @@ class Register extends Component {
 	};
 	render() {
 		return (
+			// Wrapper Div starts
 			<div className="register-body">
+				{/* =====================================Main card starts======================================= */}
 				<div className="register-card">
-					<h1>Join us</h1>
-					<br />
-					<form onSubmit={this.handleRegisterSubmit}>
-						<input
-							type="text"
-							id="firstname"
-							placeholder="Firstname"
-							value={this.state.firstname}
-							onChange={this.handleChange}
-							required
-						/>
-						<input
-							type="text"
-							id="lastname"
-							placeholder="Lastname"
-							value={this.state.lastname}
-							onChange={this.handleChange}
-							required
-						/>
-						<input
-							type="text"
-							id="user"
-							placeholder="Username"
-							value={this.state.user}
-							onChange={this.handleChange}
-							required
-						/>
-						<input
-							type="email"
-							id="email"
-							placeholder="Email"
-							value={this.state.email}
-							onChange={this.handleChange}
-							required
-						/>
-						<input
-							type="password"
-							id="pass"
-							placeholder="Password"
-							value={this.state.pass}
-							onChange={this.handleChange}
-							required
-						/>
-						<input
-							type="password"
-							id="pass2"
-							placeholder="Re-enter Password"
-							value={this.state.pass2}
-							onChange={this.handleChange}
-							required
-						/>
-						Join as:
-						<div className="radio-btn">
-							Student:
+					<h3 className="register-card-title">Join us</h3>
+					{/* ============================Form starts============================== */}
+					<form onSubmit={this.handleRegister}>
+						{/* ===================Div for firstname starts=============== */}
+						<div className="input-group mb-3 move-top">
+							<div className="input-group-prepend">
+								<span className="input-group-text">
+									<FontAwesomeIcon icon="user" id="user" />
+								</span>
+							</div>
+							<input
+								type="text"
+								className="form-control"
+								name="firstname"
+								value={this.state.firstname}
+								placeholder="Firstname"
+								onChange={this.handleChange}
+								aria-describedby="user"
+								required
+							/>
+						</div>
+						{/* ===================Div for firstname ends=============== */}
+
+						{/* ===================Div for Lastname starts=============== */}
+						<div className="input-group mb-3">
+							<div className="input-group-prepend">
+								<span className="input-group-text">
+									<FontAwesomeIcon icon="user" id="user" />
+								</span>
+							</div>
+							<input
+								type="text"
+								className="form-control"
+								name="lastname"
+								value={this.state.lastname}
+								placeholder="Lastname"
+								onChange={this.handleChange}
+								required
+							/>
+						</div>
+						{/* ===================Div for Lastname ends=============== */}
+
+						{/* ===================Div for Username starts=============== */}
+						<div className="input-group mb-3">
+							<div className="input-group-prepend">
+								<span className="input-group-text">
+									<FontAwesomeIcon icon="user" id="user" />
+								</span>
+							</div>
+							<input
+								type="text"
+								className="form-control"
+								name="user"
+								value={this.state.user}
+								placeholder="Username"
+								onChange={this.handleChange}
+								required
+							/>
+						</div>
+						{/* ===================Div for Username ends=============== */}
+
+						{/* ===================Div for Email starts=============== */}
+						<div className="input-group mb-3">
+							<div className="input-group-prepend">
+								<span className="input-group-text">
+									<FontAwesomeIcon icon="at" id="at" />
+								</span>
+							</div>
+							<input
+								type="email"
+								className="form-control"
+								name="email"
+								value={this.state.email}
+								placeholder="Email"
+								onChange={this.handleChange}
+								aria-describedby="at"
+								required
+							/>
+						</div>
+						{/* ===================Div for Email ends=============== */}
+
+						{/* ===================Div for Passowrd1 starts=============== */}
+						<div className="input-group mb-3">
+							<div className="input-group-prepend">
+								<span className="input-group-text">
+									<FontAwesomeIcon icon="key" id="key" />
+								</span>
+							</div>
+							<input
+								type="passw"
+								className="form-control"
+								name="pass"
+								value={this.state.pass}
+								placeholder="Password"
+								onChange={this.handleChange}
+								aria-describedby="key"
+								required
+							/>
+						</div>
+						{/* ===================Div for Password1 ends=============== */}
+
+						{/* ===================Div for Password2 starts=============== */}
+						<div className="input-group mb-3">
+							<div className="input-group-prepend">
+								<span className="input-group-text">
+									<FontAwesomeIcon icon="key" id="key" />
+								</span>
+							</div>
+							<input
+								type="passw"
+								className="form-control"
+								name="pass2"
+								value={this.state.pass2}
+								placeholder="Re-enter password"
+								onChange={this.handleChange}
+								aria-describedby="key"
+								required
+							/>
+						</div>
+						{/* ===================Div for Passowrd2 ends=============== */}
+
+						{/* ===================Div for Switch starts=============== */}
+
+						<div className="custom-control custom-switch">
 							<input
 								type="checkbox"
+								className="custom-control-input"
+								id="customSwitch1"
 								name="isUserChecked"
 								value={this.state.isUserChecked}
 								onChange={this.check}
-								// required
 							/>
-							Teacher:
+							<label className="custom-control-label" htmlFor="customSwitch1">
+								Student
+							</label>
+						</div>
+						<div className="custom-control custom-switch">
 							<input
 								type="checkbox"
+								className="custom-control-input"
+								id="customSwitch2"
 								name="isTutorChecked"
 								value={this.state.isTutorChecked}
 								onChange={this.check}
-								// required
 							/>
+							<label className="custom-control-label" htmlFor="customSwitch2">
+								Tutor
+							</label>
 						</div>
-						<input
-							type="submit"
-							className="register-button register-button-submit"
-							name="register"
-							value="Register"
-						/>
+						{/* ===================Div for Switch ends=============== */}
+
+						{/* =====================Div for button================== */}
+						<div className="form-group">
+							<button
+								type="login"
+								className="btn btn-block btn-primary register-btn"
+							>
+								Register
+							</button>
+						</div>
+						{/* ====================Div for button ends============== */}
 					</form>
-					<div className="register-help">
-						<h4>Already registered?</h4>
-						<Link to="/login">Login</Link>
-					</div>
+					{/* ====================================Form ends================================== */}
 				</div>
+				{/* =======================================Main card ends=================================== */}
 			</div>
+			//Wrapper Div ends
 		);
 	}
 }

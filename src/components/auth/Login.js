@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-
-import TutorDashboard from "../tutorspanel/TutorDashboard";
-import UserDashboard from "../userspanel/UserDashboard";
-
 import "./auth.css";
 import LOG from "./LOG";
 

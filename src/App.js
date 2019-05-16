@@ -34,7 +34,8 @@ class App extends Component {
 			userpass: "",
 			isUserChecked: false,
 			isTutorChecked: false,
-			resState: ""
+			resState: "",
+			adminState: false
 		};
 	}
 	handleChange = e => {
@@ -155,7 +156,7 @@ class App extends Component {
 
 						{/* Admin Routes */}
 						<Route path="/admin" component={AdminLogin} />
-						<Route path="/admindashboard" render={() => <AdminDashboard />} />
+						<Route path="/admindashboard" component={AdminDashboard} />
 						<Route path="/createpost" component={CreatePost} />
 						<Route path="/posts" component={AdminPosts} />
 

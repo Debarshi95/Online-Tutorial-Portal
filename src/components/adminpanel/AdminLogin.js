@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import "./AdminPanel.css";
+import "./Adminpanel.css";
 import axios from "axios";
 
 import AdminLOG from "./AdminLOG";
@@ -21,7 +21,7 @@ class Login extends Component {
 		});
 	};
 
-	handleAdminSubmit = e => {
+	handleAdminLogin = e => {
 		e.preventDefault();
 		console.log(this.state);
 
@@ -52,7 +52,7 @@ class Login extends Component {
 				user={this.state.user}
 				pass={this.state.pass}
 				handleChange={this.handleChange}
-				handleAdminSubmit={this.handleAdminSubmit}
+				handleAdminLogin={this.handleAdminLogin}
 			/>
 		);
 	}

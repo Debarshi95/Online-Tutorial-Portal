@@ -1,35 +1,53 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function LOG(props) {
 	return (
-		<div className="card">
-			<div className="card-body">
-				<h4 className="card-title">Member Login</h4>
+		<div className="login-body">
+			<div className="card login-card">
+				<h4 className="login-card-title">Welcome back!</h4>
 				<form onSubmit={props.userLogin}>
-					<div className="form-group">
+					<div className="move-top">
 						<label htmlFor="username">Username</label>
-						<input
-							type="text"
-							className="form-control"
-							name="username"
-							value={props.username}
-							placeholder="Enter username"
-							onChange={props.handleChange}
-							required
-						/>
+						<div className="input-group mb-3">
+							<div className="input-group-prepend">
+								<span className="input-group-text custom-icon">
+									<FontAwesomeIcon icon="user" id="user" />
+								</span>
+							</div>
+							<input
+								type="text"
+								className="form-control"
+								name="username"
+								value={props.username}
+								placeholder="Enter username"
+								onChange={props.handleChange}
+								aria-describedby="user"
+								required
+							/>
+						</div>
 					</div>
-					<div className="form-group">
+					<div>
 						<label htmlFor="password">Password</label>
-						<input
-							type="passw"
-							className="form-control"
-							name="userpass"
-							value={props.userpass}
-							placeholder="Enter password"
-							onChange={props.handleChange}
-							required
-						/>
+						<div className="input-group mb-3">
+							<div className="input-group-prepend">
+								<span className="input-group-text">
+									<FontAwesomeIcon icon="key" id="key" />
+								</span>
+							</div>
+
+							<input
+								type="passw"
+								className="form-control"
+								name="userpass"
+								value={props.userpass}
+								placeholder="Enter password"
+								onChange={props.handleChange}
+								aria-describedby="key"
+								required
+							/>
+						</div>
 					</div>
 					<div className="custom-control custom-switch">
 						<input
@@ -58,7 +76,10 @@ function LOG(props) {
 						</label>
 					</div>
 					<div className="form-group">
-						<button type="login" className="btn btn-outline-primary">
+						<button
+							type="login"
+							className="btn btn-block btn-primary login-btn"
+						>
 							login
 						</button>
 					</div>

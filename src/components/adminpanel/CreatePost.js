@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import "./AdminPanel.css";
+import "./Adminpanel.css";
 import AdminDashSidebar from "./AdminDashSidebar";
 
 export class CreatePost extends Component {
@@ -36,28 +36,38 @@ export class CreatePost extends Component {
 	render() {
 		return (
 			<div>
-				<div>
-					<AdminDashSidebar />
-				</div>
+				<AdminDashSidebar />
 				<div className="createpost-card">
 					<form onSubmit={this.handleSubmit}>
-						<label className="labels">Title</label>
+						<div className="form-group">
+							<label>Title</label>
+							<input
+								type="text"
+								id="title"
+								className="form-control"
+								onChange={this.handleChange}
+							/>
+						</div>
+						<br />
+						<div className="form-group">
+							<label>Content</label>
+							<textarea
+								className="form-control post-text"
+								id="content"
+								onChange={this.handleChange}
+							/>
+							<br />
+						</div>
 						<input
-							type="text"
-							id="title"
-							className="post-input"
-							onChange={this.handleChange}
+							type="submit"
+							value="Post"
+							className="btn btn-dark post-submit-btn"
 						/>
-						<br />
-						<label className="labels textarea">Content</label>
-						<textarea
-							className="post-text"
-							id="content"
-							onChange={this.handleChange}
-						/>
-						<br />
-						<input type="submit" value="Post" className="post-submit-btn" />
 					</form>
+				</div>
+				<div className="card createpost-top-right-sidebar">
+					<label htmlFor="category">Category</label>
+					<input type="text" className="form-control" />
 				</div>
 			</div>
 		);

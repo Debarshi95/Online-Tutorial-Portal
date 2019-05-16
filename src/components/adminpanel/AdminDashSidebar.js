@@ -3,33 +3,27 @@ import { Link } from "react-router-dom";
 import "./Adminpanel.css";
 function AdminDashSidebar() {
 	return (
-		<div className="nav flex-column admin-sidebar">
+		<div className="admin-sidebar">
 			<ul className="ul">
-				<li className="li">
-					<Link to="/createpost" className="Link">
-						CreatePost
-					</Link>
-				</li>
-				<li>
-					<Link to="/posts" className="Link">
-						All Posts
-					</Link>
-				</li>
-				<li className="li">
-					<Link to="/" className="Link">
-						1
-					</Link>
-				</li>
-				<li className="li">
-					<Link to="/" className="Link">
-						#
-					</Link>
-				</li>
-				<li className="li">
-					<Link to="/" className="Link">
-						#
-					</Link>
-				</li>
+				<Link to="/createpost" className="Link">
+					CreatePost
+				</Link>
+
+				<Link to="/posts" className="Link">
+					All Posts
+				</Link>
+
+				<Link to="/" className="Link">
+					1
+				</Link>
+
+				<Link to="/" className="Link">
+					#
+				</Link>
+
+				<Link to="/" className="Link">
+					#
+				</Link>
 			</ul>
 		</div>
 	);
