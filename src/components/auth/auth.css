@@ -75,14 +75,11 @@
 	height: 90vh;
 	overflow: hidden;
 }
-/* .register-card-title {
-	margin-left: 20px;
-} */
 
 .register-card {
 	padding: 20px 40px 0px 40px;
-	width: 420px;
-	height: 545px;
+	width: 400px;
+	height: 530px;
 	margin: 10px 0 0 450px;
 	border-radius: 2px;
 	overflow: hidden;

@@ -4,6 +4,7 @@ import Nav from "../../homepage/Nav";
 function CLanguage() {
 	return (
 		<div>
+			<Nav />
 			<div>
 				<ul className="csidebar">
 					<li>C Introduction</li>

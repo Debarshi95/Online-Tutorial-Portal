@@ -74,11 +74,11 @@
 .admin-login-body {
 	background-color: rgb(71, 209, 71);
 	overflow: hidden;
-	height: 90vh;
+	height: 100vh;
 }
 .admin-login-card {
 	width: 400px !important;
-	margin: 90px 450px 40px 450px !important;
+	margin: 120px 450px 40px 450px !important;
 	height: 300px !important;
 	padding: 20px 40px 20px 40px !important;
 	background-color: rgb(71, 209, 71) !important;
