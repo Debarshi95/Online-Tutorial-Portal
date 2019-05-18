@@ -1,7 +1,17 @@
 import React, { Component } from "react";
+import Nav from "../homepage/Nav";
+import { UserConsumer } from "../../UserContext";
 class UserDashboard extends Component {
 	render() {
-		return <div>Hello</div>;
+		return (
+			<UserConsumer>
+				{usercontext => (
+					<div>
+						<Nav />
+					</div>
+				)}
+			</UserConsumer>
+		);
 	}
 }
 

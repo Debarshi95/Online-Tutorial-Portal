@@ -5,147 +5,70 @@ import {
 	Switch,
 	Redirect
 } from "react-router-dom";
-import axios from "axios";
+
 import Homepage from "./components/homepage/Homepage";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
-import Tutorials from "./components/tutorialspage/Tutorials";
+import Tutorials from "./components/tutorials/Tutorials";
 import ContactUs from "./components/auth/ContactUs";
 import About from "./components/homepage/About";
-import CLanguage from "./components/tutorialspage/cLangaugeFiles/CLanguage";
-import JavaScript from "./components/tutorialspage/javascriptFiles/JavaScript";
+import CLanguage from "./components/tutorials/cLangaugeFiles/CLanguage";
+import JavaScript from "./components/tutorials/javascriptFiles/JavaScript";
 import AdminLogin from "./components/adminpanel/AdminLogin";
 import TerAndCon from "./components/homepage/TerAndCon";
-import Nav from "./components/homepage/Nav";
 import UserDashboard from "./components/userspanel/UserDashboard";
 import ErrorPage from "./components/homepage/ErrorPage";
-import TutorDashboard from "./components/tutorspanel/TutorDashboard";
 import "./App.css";
 import AdminDashboard from "./components/adminpanel/AdminDashboard";
 import CreatePost from "./components/adminpanel/CreatePost";
 import AdminPosts from "./components/adminpanel/AdminPosts";
+import { UserProvider, UserConsumer } from "./UserContext";
+import { RegisterProvider } from "./RegisterContext";
+import { AdminProvider, AdminConsumer } from "./AdminContext";
 
 class App extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			username: "",
-			userpass: "",
-			isUserChecked: false,
-			isTutorChecked: false,
-			resState: ""
-		};
-	}
-	handleChange = e => {
-		this.setState({
-			[e.target.name]: e.target.value
-		});
-	};
-	check = e => {
-		this.setState({
-			[e.target.name]: e.target.checked
-		});
-	};
-	userLogout = () => {
-		this.setState({
-			resState: "",
-			isUserChecked: false,
-			isTutorChecked: false
-		});
-	};
-	userLogin = e => {
-		e.preventDefault();
-
-		const user = this.state.username;
-		const pass = this.state.userpass;
-		const userLogged = 1;
-		const tutorLogged = 0;
-
-		if (this.state.isUserChecked && !this.state.isTutorChecked) {
-			axios
-				.post(
-					`http://localhost/reactphp/login.php?username=${user}&userpass=${pass}&isLoggedIn=${userLogged}`
-				)
-				.then(res => {
-					console.log(res);
-					console.log(res.data);
-					const LoggedInState = `${pass}` === res.data.Pass;
-					this.setState(
-						{
-							resState: LoggedInState ? "USER" : false
-						},
-						console.log(this.state)
-					);
-				})
-				.catch(err => console.log(err));
-		}
-		if (this.state.isTutorChecked && !this.state.isUserChecked) {
-			axios
-				.get(
-					`http://localhost/reactphp/login.php?username=${user}&userpass=${pass}&isLoggedIn=${tutorLogged}`
-				)
-				.then(res => {
-					console.log(res);
-					console.log(res.data);
-					const LoggedInState = `${pass}` === res.data.Pass;
-					this.setState({
-						resState: LoggedInState ? "TUTOR" : false
-					});
-					console.log(this.state);
-				});
-		}
-	};
-
 	render() {
 		return (
 			<Router>
-				<div>
-					<Nav resState={this.state.resState} userLogout={this.userLogout} />
-					<Switch>
-						<Route exact path="/" component={Homepage} />
+				<Switch>
+					<Route exact path="/" component={Homepage} />
 
-						{/* Login and respective routes for Learner and Tutor */}
-						<Route
-							path="/login"
-							render={state => (
-								<Login
-									{...state}
-									isLoggedIn={this.state.isLoggedIn}
-									username={this.state.username}
-									userpass={this.state.userpass}
-									isUserChecked={this.state.isUserChecked}
-									isTutorChecked={this.state.isTutorChecked}
-									resState={this.state.resState}
-									handleChange={this.handleChange}
-									check={this.check}
-									userLogin={this.userLogin}
+					{/* Login and respective routes for Learner and Tutor */}
+					<UserProvider>
+						<Route path="/login" component={Login} />
+						<UserConsumer>
+							{usercontext => (
+								<Route
+									path="/userdashboard"
+									render={() =>
+										usercontext.state.resState === "USER" ? (
+											<UserDashboard />
+										) : (
+											<Redirect to="/login" />
+										)
+									}
 								/>
 							)}
-						/>
-						<Route
-							path="/userdashboard"
-							render={() =>
-								this.state.resState === "USER" ? (
-									<UserDashboard />
-								) : (
-									<Redirect to="/login" />
-								)
-							}
-						/>
-						<Route
-							path="/tutordashboard"
-							render={() =>
-								this.state.resState === "TUTOR" ? (
-									<TutorDashboard />
-								) : (
-									<Redirect to="/login" />
-								)
-							}
-						/>
+						</UserConsumer>
+						<UserConsumer>
+							{usercontext => (
+								<Route
+									path="/tutordashboard"
+									render={() =>
+										usercontext.state.resState === "TUTOR" ? (
+											<UserDashboard />
+										) : (
+											<Redirect to="/login" />
+										)
+									}
+								/>
+							)}
+						</UserConsumer>
 
 						{/* Common Routes */}
-						<Route path="/register" component={Register} />
+						<RegisterProvider>
+							<Route path="/register" component={Register} />
+						</RegisterProvider>
 						<Route path="/tutorials" component={Tutorials} />
 						<Route path="/terms" component={TerAndCon} />
 						<Route path="/contactus" component={ContactUs} />
@@ -154,15 +77,29 @@ class App extends Component {
 						<Route path="/javascript" component={JavaScript} />
 
 						{/* Admin Routes */}
-						<Route path="/admin" component={AdminLogin} />
-						<Route path="/admindashboard" render={() => <AdminDashboard />} />
-						<Route path="/createpost" component={CreatePost} />
-						<Route path="/posts" component={AdminPosts} />
-
-						{/* 404 */}
-						<Route path="*" component={ErrorPage} />
-					</Switch>
-				</div>
+						<AdminProvider>
+							<Route path="/admin" component={AdminLogin} />
+							<AdminConsumer>
+								{admincontext => (
+									<Route
+										path="/admindashboard"
+										render={() =>
+											admincontext.state.isAdminLoggedIn ? (
+												<AdminDashboard />
+											) : (
+												<Redirect to="/admin" />
+											)
+										}
+									/>
+								)}
+							</AdminConsumer>
+							<Route path="/createpost" component={CreatePost} />
+							<Route path="/posts" component={AdminPosts} />
+						</AdminProvider>
+					</UserProvider>
+					{/* 404 */}
+					<Route path="*" component={ErrorPage} />
+				</Switch>
 			</Router>
 		);
 	}
