@@ -30,7 +30,7 @@ class Login extends Component {
       .get(`http://localhost/reactphp/adminauth.php?user=${user}&pass=${pass}`)
       .then(res => {
         console.log(res.data);
-        const AdminState = `${pass}` === res.data.Pass;
+        const AdminState = `${pass}` === res.data.pass;
         this.setState({
           isAdminLoggedIn: AdminState ? true : false
         });
