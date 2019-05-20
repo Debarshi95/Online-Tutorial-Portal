@@ -18,13 +18,13 @@ import AdminLogin from "./components/adminpanel/AdminLogin";
 import TerAndCon from "./components/homepage/TerAndCon";
 import UserDashboard from "./components/userspanel/UserDashboard";
 import ErrorPage from "./components/homepage/ErrorPage";
-import "./App.css";
 import AdminDashboard from "./components/adminpanel/AdminDashboard";
 import CreatePost from "./components/adminpanel/CreatePost";
 import AdminPosts from "./components/adminpanel/AdminPosts";
 import { UserProvider, UserConsumer } from "./UserContext";
 import { RegisterProvider } from "./RegisterContext";
 import { AdminProvider, AdminConsumer } from "./AdminContext";
+import "./App.css";
 
 class App extends Component {
 	render() {
@@ -50,6 +50,7 @@ class App extends Component {
 								/>
 							)}
 						</UserConsumer>
+
 						<UserConsumer>
 							{usercontext => (
 								<Route
@@ -93,8 +94,36 @@ class App extends Component {
 									/>
 								)}
 							</AdminConsumer>
-							<Route path="/createpost" component={CreatePost} />
-							<Route path="/posts" component={AdminPosts} />
+
+							<AdminConsumer>
+								{admincontext => (
+									<Route
+										path="/createpost"
+										render={() =>
+											admincontext.state.isAdminLoggedIn ? (
+												<CreatePost />
+											) : (
+												<Redirect to="/admin" />
+											)
+										}
+									/>
+								)}
+							</AdminConsumer>
+
+							<AdminConsumer>
+								{admincontext => (
+									<Route
+										path="/posts"
+										render={() =>
+											admincontext.state.isAdminLoggedIn ? (
+												<AdminPosts />
+											) : (
+												<Redirect to="/admin" />
+											)
+										}
+									/>
+								)}
+							</AdminConsumer>
 						</AdminProvider>
 					</UserProvider>
 					{/* 404 */}
