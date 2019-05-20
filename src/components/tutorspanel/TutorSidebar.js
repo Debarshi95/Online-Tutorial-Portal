@@ -5,7 +5,7 @@ function TutorSidebar() {
 		<div class="row">
 			<div class="col-7">
 				<div
-					class="nav flex-column nav-pills"
+					class="nav flex-column nav-pills tutor-sidebar"
 					id="v-pills-tab"
 					role="tablist"
 					aria-orientation="vertical"

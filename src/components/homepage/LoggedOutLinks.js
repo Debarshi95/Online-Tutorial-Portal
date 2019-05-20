@@ -4,7 +4,7 @@ import "./Homepage.css";
 
 function LoggedOutLinks() {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav className="navbar navbar-expand-lg navbar-dark">
 			<NavLink to="/" className="navbar-brand">
 				ProgramLearners.com
 			</NavLink>

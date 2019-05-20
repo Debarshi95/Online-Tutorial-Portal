@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import "./AdminPanel.css";
-import axios from "axios";
-import Nav from "../homepage/Nav";
-import AdminDashboard from "./AdminDashboard";
+import { Redirect } from "react-router-dom";
+import "./Adminpanel.css";
+import AdminLOG from "./AdminLOG";
+import { AdminConsumer } from "../../AdminContext";
 class Login extends Component {
+<<<<<<< HEAD
   constructor() {
     super();
     this.state = {
@@ -73,6 +74,21 @@ class Login extends Component {
       </div>
     );
   }
+=======
+	render() {
+		return (
+			<AdminConsumer>
+				{admincontext =>
+					admincontext.state.isAdminLoggedIn ? (
+						<Redirect to="/admindashboard" />
+					) : (
+						<AdminLOG />
+					)
+				}
+			</AdminConsumer>
+		);
+	}
+>>>>>>> 8fcfc2b6b8785a41f59ab7c17359eb41a1b7ac81
 }
 
 export default Login;

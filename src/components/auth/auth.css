@@ -1,129 +1,96 @@
 /*ContactUs.js */
 .contact-body {
-	margin: 0;
-	padding: 0;
-	background-color: rgb(207, 250, 143);
+	background-color: #160213;
+	overflow: hidden;
 	height: 90vh;
-	overflow: hidden;
 }
-.conact-card {
-	padding: 100px 50px;
-	width: 600px;
+.contact-card {
+	width: 400px;
 	height: 450px;
-	background-color: #f7f7f7;
-	margin: 50px 0 0 350px;
-	border-radius: 2px;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	overflow: hidden;
+	margin-left: 450px;
+	margin-top: 40px;
+	border: solid 1px #dad7d7;
+	border-radius: 3px;
+	padding: 20px 40px 20px 40px;
+	border: none !important;
+	color: #fff;
+}
+.contact-title {
+	margin-top: 0px;
+}
+.textarea {
+	height: 120px !important;
+}
+.contact-btn {
+	width: 100px;
+	margin-top: 10px;
+	background-color: #460c3d !important;
+	border: none !important;
+	text-transform: uppercase;
+}
+.contact-btn:hover {
+	background-color: #460c3d91 !important;
 }
 
 /* Login.js */
-.card {
+.login-body {
+	background-color: #130327;
+	overflow: hidden;
+	height: 90vh;
+}
+.login-card {
 	width: 380px;
 	margin: 50px 0 0 450px;
-	height: 450px;
-}
-.card-title {
-	padding-top: 40px;
-	text-align: center;
-}
-.card-body {
+	height: 390px;
+	padding: 20px 40px 20px 40px;
+	background-color: #130327 !important;
 	color: #fff;
-	background-color: rgba(0, 0, 0, 0.726);
+	border: none !important;
 }
-.form-group {
-	padding: 0px 20px 0 20px;
+
+.move-top {
+	margin-top: 30px;
 }
-.custom-control {
-	margin: 0px 20px 0 20px;
-}
-.btn {
+.login-card-title {
 	margin-top: 10px;
+}
+.custom-icon {
+	left: 30px;
+}
+
+.login-btn {
+	margin-top: 10px;
+	width: 100px;
+	background-color: #330969 !important;
+	text-transform: uppercase;
+	border: none !important;
+}
+.login-btn:hover {
+	background-color: #693da348 !important;
 }
 /* Register.js */
 
 .register-body {
-	background-color: rgba(116, 87, 163, 0.164);
-	height: 100vh;
+	background-color: #003e5a;
+	height: 90vh;
 	overflow: hidden;
 }
+
 .register-card {
-	padding: 20px 35px 10px 35px;
+	padding: 20px 40px 0px 40px;
 	width: 400px;
-	height: 500px;
-	margin: 30px 0 0 450px;
-	background-color: #f7f7f7;
+	height: 530px;
+	margin: 10px 0 0 450px;
 	border-radius: 2px;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 	overflow: hidden;
-}
-
-.register-card h1 {
-	font-weight: 100;
-	text-align: center;
-	font-size: 2.3em;
-}
-.register-card input[type="text"],
-input[type="email"],
-input[type="password"] {
-	height: 44px;
-	font-size: 16px;
-	width: 100%;
-	margin-bottom: 10px;
-	background: #fff;
-
-	border-radius: 30px;
-	padding: 0 18px;
-	outline: none;
-}
-
-.register-card input[type="text"],
-input[type="email"],
-input[type="password"]:hover {
-	border: 1px solid #d9d9d9;
-}
-.register-card input[type="submit"] {
-	width: 100%;
-	display: block;
-	margin-bottom: 5px;
-	position: relative;
-}
-.radio-btn {
-	margin: -18px 0px 13px 70px;
-}
-.register-button {
-	text-align: center;
-	font-size: 14px;
-	font-family: Arial, sans-serif;
-	font-weight: 700;
-	height: 36px;
-	padding: 0 8px;
-}
-.register-button-submit {
-	border: 0px;
 	color: #fff;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.1);
-	background-color: #536ab6;
-}
-.register-button-submit:hover {
-	border: 0px;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	background-color: #082d7cf5;
-}
-.register-card a {
-	text-decoration: none;
-	color: #666;
-	font-weight: 400;
-	text-align: center;
-	display: inline-block;
-	opacity: 0.6;
-	transition: opacity ease 0.5s;
+	border: 1px solid !important;
 }
 
-.register-card a:hover {
-	opacity: 1;
+.register-btn {
+	margin-top: 10px;
+	text-transform: uppercase;
 }
-
 .register-help {
 	width: 100%;
 	text-align: center;
