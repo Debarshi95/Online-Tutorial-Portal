@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import "./Adminpanel.css";
+import "./AdminPanel.css";
 import AdminDashSidebar from "./AdminDashSidebar";
 
 export class CreatePost extends Component {
