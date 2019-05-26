@@ -9,7 +9,7 @@ class Login extends Component {
 		return (
 			<UserConsumer>
 				{usercontext =>
-					usercontext.state.resState === "USER" ? (
+					usercontext.state.resState ? (
 						<Redirect to="/userdashboard" />
 					) : usercontext.state.resState === "TUTOR" ? (
 						<Redirect to="/tutordashboard" />

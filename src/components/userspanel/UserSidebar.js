@@ -1,24 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./AdminPanel.css";
-function AdminDashSidebar() {
+function UserSidebar() {
 	return (
 		<div className="admin-sidebar">
 			<ul className="ul">
 				<Link to="/createpost" className="Link">
-					CreatePost
+					Courses
 				</Link>
 
 				<Link to="/posts" className="Link">
-					All Posts
+					Javascript
 				</Link>
 
 				<Link to="/" className="Link">
-					1
+					C
 				</Link>
 
 				<Link to="/" className="Link">
-					#
+					PHP
 				</Link>
 
 				<Link to="/" className="Link">
@@ -26,6 +25,7 @@ function AdminDashSidebar() {
 				</Link>
 			</ul>
 		</div>
+        
 	);
 }
-export default AdminDashSidebar;
+export default UserSidebar;

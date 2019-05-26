@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import "./Adminpanel.css";
+import "./AdminPanel.css";
 import AdminLOG from "./AdminLOG";
 import { AdminConsumer } from "../../AdminContext";
 class Login extends Component {

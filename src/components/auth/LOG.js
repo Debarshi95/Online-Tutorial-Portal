@@ -1,4 +1,4 @@
-import React ,{Fragment}from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UserConsumer } from "../../UserContext";
@@ -15,7 +15,7 @@ function LOG() {
 							<h4 className="login-card-title">Welcome back!</h4>
 							<form onSubmit={usercontext.userLogin}>
 								<div className="move-top">
-									<label htmlFor="username">Username</label>
+									<label htmlFor="email">Email</label>
 									<div className="input-group mb-3">
 										<div className="input-group-prepend">
 											<span className="input-group-text custom-icon">
@@ -25,9 +25,9 @@ function LOG() {
 										<input
 											type="text"
 											className="form-control"
-											name="username"
-											value={usercontext.state.username}
-											placeholder="Enter username"
+											name="email"
+											value={usercontext.state.email}
+											placeholder="Enter email"
 											onChange={usercontext.handleChange}
 											aria-describedby="user"
 											required
@@ -46,8 +46,8 @@ function LOG() {
 										<input
 											type="passw"
 											className="form-control"
-											name="userpass"
-											value={usercontext.state.userpass}
+											name="password"
+											value={usercontext.state.password}
 											placeholder="Enter password"
 											onChange={usercontext.handleChange}
 											aria-describedby="key"

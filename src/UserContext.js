@@ -5,8 +5,8 @@ const UserContext = React.createContext();
 
 class UserProvider extends Component {
 	state = {
-		username: "",
-		userpass: "",
+		email: "",
+		password: "",
 		isUserChecked: false,
 		isTutorChecked: false,
 		resState: ""

@@ -177,10 +177,13 @@ class Register extends Component {
 										<button
 											type="login"
 											className="btn btn-block btn-primary register-btn"
+											data-toggle="modal"
+											data-target="#exampleModalCenter"
 										>
 											Register
 										</button>
 									</div>
+
 									{/* ====================Div for button ends============== */}
 								</form>
 								{/* ====================================Form ends================================== */}
