@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import "./AdminPanel.css";
+import "./Adminpanel.css";
 import AdminLOG from "./AdminLOG";
 import { AdminConsumer } from "../../AdminContext";
 class Login extends Component {
@@ -11,8 +11,8 @@ class Login extends Component {
 					admincontext.state.isAdminLoggedIn ? (
 						<Redirect to="/admindashboard" />
 					) : (
-						<AdminLOG />
-					)
+							<AdminLOG />
+						)
 				}
 			</AdminConsumer>
 		);

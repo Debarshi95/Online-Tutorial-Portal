@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./AdminPanel.css";
+import "./Adminpanel.css";
 function AdminDashSidebar() {
 	return (
 		<div className="admin-sidebar">
