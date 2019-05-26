@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Nav from "../homepage/Nav";
 import { UserConsumer } from "../../UserContext";
+import UserSidebar from './UserSidebar'; 
+import UserBoard from './UserBoard';
 class UserDashboard extends Component {
 	render() {
 		return (
@@ -8,6 +10,8 @@ class UserDashboard extends Component {
 				{usercontext => (
 					<div>
 						<Nav />
+						<UserSidebar/>
+						<UserBoard />
 					</div>
 				)}
 			</UserConsumer>
