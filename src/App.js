@@ -41,7 +41,8 @@ class App extends Component {
 								<Route
 									path="/userdashboard"
 									render={() =>
-										usercontext.state.resState === "USER" ? (
+										usercontext.state.resState ===
+										localStorage.getItem("token") ? (
 											<UserDashboard />
 										) : (
 											<Redirect to="/login" />

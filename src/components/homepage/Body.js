@@ -7,25 +7,25 @@ class Body extends Component {
 			// Main div wrapper starts
 			<div className="homepage-body">
 				{/* jumbotron cover starts */}
-				<div class="jumbotron jumbotron-fluid jumbotron-height">
-					<h1 class="display-4">Hello, world!</h1>
+				<div className="banner">
+					<h1>jjjj</h1>
 				</div>
 				{/* jumbotron cover ends */}
 
 				{/* Middle body starts */}
 				<div className="middle-body">
-					<h2>Body</h2>
+					<h3 className="h3">Welcome to ProgramLearners.com</h3>
 
 					{/* =================================1st Card Wrapper Starts====================== */}
 					<div class="card-deck card-wrapper">
 						{/* ===========================Individual card starts=============== */}
 						<Link to="/c" class="card homepage-body-card">
-							<div class="card-body">
-								<h5 class="card-title">C</h5>
+							<div class="card-body custom-card">
+								<h5 class="card-title">CSS</h5>
 								<p class="card-text">
-									This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit
-									longer.
+									CSS stands for Cascading Style Sheets. CSS describes how
+									HTML elements are to be displayed on screen, paper, or in
+									other media.
 								</p>
 							</div>
 						</Link>
@@ -33,11 +33,12 @@ class Body extends Component {
 
 						{/* ===================Individual card starts===================== */}
 						<Link to="/javascript" class="card homepage-body-card">
-							<div class="card-body">
+							<div class="card-body custom-card">
 								<h5 class="card-title">JavaScript</h5>
 								<p class="card-text">
-									This card has supporting text below as a natural lead-in to
-									additional content.
+									JavaScript is a very powerful client-side scripting
+									language. JavaScript is used mainly for enhancing the
+									interaction of a user with the webpage.
 								</p>
 							</div>
 						</Link>
@@ -45,12 +46,12 @@ class Body extends Component {
 
 						{/* =========================Individual card starts==================== */}
 						<Link to="/php" class="card homepage-body-card">
-							<div class="card-body">
+							<div class="card-body custom-card">
 								<h5 class="card-title">PHP</h5>
 								<p class="card-text">
-									This is a wider card with supporting text below as a natural
-									lead-in to additional content. This card has even longer
-									content than the first to show that equal height action.
+									PHP is an acronym for "PHP: Hypertext Preprocessor" PHP is
+									a widely-used, open source scripting language PHP scripts
+									are executed on the server
 								</p>
 							</div>
 						</Link>
@@ -62,12 +63,12 @@ class Body extends Component {
 					<div class="card-deck card-wrapper">
 						{/* =======================Individual card starts============= */}
 						<Link to="/cpp" class="card homepage-body-card">
-							<div class="card-body">
+							<div class="card-body custom-card">
 								<h5 class="card-title">C++</h5>
 								<p class="card-text">
-									This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit
-									longer.
+									C++ is a cross-platformed language that can be used to
+									create sophisticated high-performance applications. C++
+									was developed in Bell labs 1979.
 								</p>
 							</div>
 						</Link>
@@ -75,11 +76,12 @@ class Body extends Component {
 
 						{/* ======================Individual card starts=========== */}
 						<Link to="/java" class="card homepage-body-card">
-							<div class="card-body">
+							<div class="card-body custom-card">
 								<h5 class="card-title">JAVA</h5>
 								<p class="card-text">
-									This card has supporting text below as a natural lead-in to
-									additional content.
+									Java is a popular programming language, created in 1995.
+									It is one of the most popular programming language in the
+									world.
 								</p>
 							</div>
 						</Link>
@@ -87,12 +89,11 @@ class Body extends Component {
 
 						{/* =======================Individual card starts================== */}
 						<Link to="/html" class="card homepage-body-card">
-							<div class="card-body">
+							<div class="card-body custom-card">
 								<h5 class="card-title">HTML</h5>
 								<p class="card-text">
-									This is a wider card with supporting text below as a natural
-									lead-in to additional content. This card has even longer
-									content than the first to show that equal height action.
+									HTML is the standard markup language for creating Web
+									pages. HTML stands for Hyper Text Markup Language .
 								</p>
 							</div>
 						</Link>

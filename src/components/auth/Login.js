@@ -6,10 +6,11 @@ import { UserConsumer } from "../../UserContext";
 
 class Login extends Component {
 	render() {
+		const token = localStorage.getItem("token");
 		return (
 			<UserConsumer>
 				{usercontext =>
-					usercontext.state.resState ? (
+					usercontext.state.resState === token ? (
 						<Redirect to="/userdashboard" />
 					) : usercontext.state.resState === "TUTOR" ? (
 						<Redirect to="/tutordashboard" />

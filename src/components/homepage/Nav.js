@@ -7,7 +7,7 @@ function Nav() {
 	return (
 		<UserConsumer>
 			{usercontext =>
-				usercontext.state.resState === "USER" ? (
+				usercontext.state.resState === localStorage.getItem("token") ? (
 					<LoggedInLinks />
 				) : usercontext.state.resState === "TUTOR" ? (
 					<LoggedInLinks />

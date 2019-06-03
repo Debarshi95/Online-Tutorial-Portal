@@ -7,7 +7,10 @@
 	font-size: 15px;
 	margin-right: 10px;
 }
-
+.nav-link {
+	color: #fff !important;
+	font-weight: 600;
+}
 .nav-item:hover {
 	background-color: rgba(153, 255, 106, 0.664);
 	color: white;
@@ -16,26 +19,36 @@
 
 /* Body.js styles */
 
-.jumbotron-height {
-	height: 500px;
+.banner {
+	background: url(../images/banner.jpeg) no-repeat;
+	background-size: cover;
+	height: 800px;
+	opacity: 0.7;
 }
 .card-container {
 	width: 400px;
 	background-color: aliceblue;
 }
 .middle-body {
-	height: 800px;
-	background-color: aquamarine;
+	height: 1000px;
+	background-color: #fff;
+	padding-top: 130px;
+}
+.h3 {
+	text-align: center;
 }
 .card-wrapper {
 	width: 90% !important;
-
-	margin: 80px 40px 100px 60px !important;
+	margin: 130px 40px 100px 60px !important;
 	padding: 0;
 }
 .homepage-body-card {
 	color: #000000 !important;
 	text-align: center !important;
+	display: block;
+}
+.custom-card {
+	border: 1px solid rgb(45, 241, 45);
 }
 .homepage-body-card:hover {
 	text-decoration: none !important;
@@ -50,8 +63,26 @@
 	height: 250px !important;
 	background-color: #000000d5 !important;
 	color: #fff !important;
+	padding: 40px 100px 30px 100px;
 }
 .footer-card {
-	width: 30%;
+	width: 40%;
+	background-color: transparent;
+	height: 170px;
+}
+.footer-card-2 {
+	width: 40%;
+	margin-left: 700px;
+	background-color: transparent;
+	margin-top: -168px;
+	height: 170px;
+}
+.hr {
 	background-color: #fff;
+	width: 390px;
+}
+.footer-btn {
+	background-color: #fff !important;
+	color: #000000 !important;
+	font-weight: 500 !important;
 }

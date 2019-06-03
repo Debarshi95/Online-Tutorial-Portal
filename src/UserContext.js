@@ -31,43 +31,54 @@ class UserProvider extends Component {
 	userLogin = e => {
 		e.preventDefault();
 
-		const user = this.state.username;
-		const pass = this.state.userpass;
-		const userLogged = 1;
-		const tutorLogged = 0;
-
 		if (this.state.isUserChecked && !this.state.isTutorChecked) {
-			axios
-				.post(
-					`http://localhost/reactphp/login.php?username=${user}&userpass=${pass}&isLoggedIn=${userLogged}`
-				)
+			axios({
+				url:
+					"http://localhost/rest-api-authentication-example/api/user_login.php",
+				method: "post",
+				data: {
+					email: this.state.email,
+					password: this.state.password
+				},
+				config: {
+					headers: { "Content-Type": "application/json" }
+				}
+			})
 				.then(res => {
 					console.log(res);
 					console.log(res.data);
-					const LoggedInState = `${pass}` === res.data.Pass;
+					localStorage.setItem("token", res.data.jwt);
+					const LoggedInState = localStorage.getItem("token");
 					this.setState(
 						{
-							resState: LoggedInState ? "USER" : false
+							resState: LoggedInState
 						},
-						console.log(this.state)
+						() => {
+							console.log(this.state);
+						}
 					);
 				})
 				.catch(err => console.log(err));
 		}
 		if (this.state.isTutorChecked && !this.state.isUserChecked) {
-			axios
-				.get(
-					`http://localhost/reactphp/login.php?username=${user}&userpass=${pass}&isLoggedIn=${tutorLogged}`
-				)
-				.then(res => {
-					console.log(res);
-					console.log(res.data);
-					const LoggedInState = `${pass}` === res.data.Pass;
-					this.setState({
-						resState: LoggedInState ? "TUTOR" : false
-					});
-					console.log(this.state);
-				});
+			axios({
+				url:
+					"http://localhost/rest-api-authentication-example/api/tutor_login.php",
+				method: "post",
+				data: {
+					email: this.state.email,
+					password: this.state.password
+				},
+				config: {
+					headers: { "Content-Type": "application/json" }
+				}
+			}).then(res => {
+				console.log(res);
+				console.log(res.data);
+				localStorage.setItem("token", res.data.jwt);
+
+				console.log(this.state);
+			});
 		}
 	};
 

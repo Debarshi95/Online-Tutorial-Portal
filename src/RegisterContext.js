@@ -7,10 +7,10 @@ class RegisterProvider extends Component {
 	state = {
 		firstname: "",
 		lastname: "",
-		user: "",
+		username: "",
 		email: "",
-		pass: "",
-		pass2: "",
+		password: "",
+		password2: "",
 		isUserChecked: "",
 		isTutorChecked: ""
 	};
@@ -28,29 +28,31 @@ class RegisterProvider extends Component {
 	handleRegister = e => {
 		e.preventDefault();
 
-		const firstname = this.state.firstname;
-		const lastname = this.state.lastname;
-		const user = this.state.user;
-		const email = this.state.email;
-		const pass = this.state.pass;
-		const pass2 = this.state.pass2;
-		const isUserChecked = this.state.isUserChecked;
-		const isTutorChecked = this.state.isTutorChecked;
 		if (this.state.isUserChecked && !this.state.isTutorChecked) {
-			axios
-				.post(
-					`http://localhost/reactphp/users.php?firstname=${firstname}&lastname=${lastname}&user=${user}&email=${email}&pass=${pass}&pass2=${pass2}&isUserChecked=${isUserChecked}`
-				)
+			axios({
+				url:
+					"http://localhost/rest-api-authentication-example/api/create_user.php",
+				method: "post",
+				data: this.state,
+				config: {
+					headers: { "Content-Type": "application/json" }
+				}
+			})
 				.then(res => {
 					console.log(res);
 					console.log(res.data);
 				})
 				.catch(err => console.log(err));
 		} else if (this.state.isTutorChecked && !this.state.isUserChecked) {
-			axios
-				.post(
-					`http://localhost/reactphp/tutors.php?firstname=${firstname}&lastname=${lastname}&user=${user}&email=${email}&pass=${pass}&pass2=${pass2}&isTutorChecked=${isTutorChecked}`
-				)
+			axios({
+				url:
+					"http://localhost/rest-api-authentication-example/api/create_tutor.php",
+				method: "post",
+				data: this.state,
+				config: {
+					headers: { "Content-Type": "application/json" }
+				}
+			})
 				.then(res => {
 					console.log(res);
 					console.log(res.data);

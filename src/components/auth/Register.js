@@ -67,8 +67,8 @@ class Register extends Component {
 										<input
 											type="text"
 											className="form-control"
-											name="user"
-											value={registercontext.state.user}
+											name="username"
+											value={registercontext.state.username}
 											placeholder="Username"
 											onChange={registercontext.handleChange}
 											required
@@ -106,8 +106,8 @@ class Register extends Component {
 										<input
 											type="passw"
 											className="form-control"
-											name="pass"
-											value={registercontext.state.pass}
+											name="password"
+											value={registercontext.state.password}
 											placeholder="Password"
 											onChange={registercontext.handleChange}
 											aria-describedby="key"
@@ -126,8 +126,8 @@ class Register extends Component {
 										<input
 											type="passw"
 											className="form-control"
-											name="pass2"
-											value={registercontext.state.pass2}
+											name="password2"
+											value={registercontext.state.password2}
 											placeholder="Re-enter password"
 											onChange={registercontext.handleChange}
 											aria-describedby="key"
