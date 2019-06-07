@@ -7,9 +7,7 @@ class Body extends Component {
 			// Main div wrapper starts
 			<div className="homepage-body">
 				{/* jumbotron cover starts */}
-				<div className="banner">
-					<h1>jjjj</h1>
-				</div>
+				<div className="banner" />
 				{/* jumbotron cover ends */}
 
 				{/* Middle body starts */}
@@ -23,9 +21,9 @@ class Body extends Component {
 							<div class="card-body custom-card">
 								<h5 class="card-title">CSS</h5>
 								<p class="card-text">
-									CSS stands for Cascading Style Sheets. CSS describes how
-									HTML elements are to be displayed on screen, paper, or in
-									other media.
+									CSS stands for Cascading Style Sheets. CSS describes how HTML
+									elements are to be displayed on screen, paper, or in other
+									media.
 								</p>
 							</div>
 						</Link>
@@ -36,9 +34,9 @@ class Body extends Component {
 							<div class="card-body custom-card">
 								<h5 class="card-title">JavaScript</h5>
 								<p class="card-text">
-									JavaScript is a very powerful client-side scripting
-									language. JavaScript is used mainly for enhancing the
-									interaction of a user with the webpage.
+									JavaScript is a very powerful client-side scripting language.
+									JavaScript is used mainly for enhancing the interaction of a
+									user with the webpage.
 								</p>
 							</div>
 						</Link>
@@ -49,9 +47,9 @@ class Body extends Component {
 							<div class="card-body custom-card">
 								<h5 class="card-title">PHP</h5>
 								<p class="card-text">
-									PHP is an acronym for "PHP: Hypertext Preprocessor" PHP is
-									a widely-used, open source scripting language PHP scripts
-									are executed on the server
+									PHP is an acronym for "PHP: Hypertext Preprocessor" PHP is a
+									widely-used, open source scripting language PHP scripts are
+									executed on the server
 								</p>
 							</div>
 						</Link>
@@ -66,9 +64,9 @@ class Body extends Component {
 							<div class="card-body custom-card">
 								<h5 class="card-title">C++</h5>
 								<p class="card-text">
-									C++ is a cross-platformed language that can be used to
-									create sophisticated high-performance applications. C++
-									was developed in Bell labs 1979.
+									C++ is a cross-platformed language that can be used to create
+									sophisticated high-performance applications. C++ was developed
+									in Bell labs 1979.
 								</p>
 							</div>
 						</Link>
@@ -79,9 +77,8 @@ class Body extends Component {
 							<div class="card-body custom-card">
 								<h5 class="card-title">JAVA</h5>
 								<p class="card-text">
-									Java is a popular programming language, created in 1995.
-									It is one of the most popular programming language in the
-									world.
+									Java is a popular programming language, created in 1995. It is
+									one of the most popular programming language in the world.
 								</p>
 							</div>
 						</Link>
@@ -92,8 +89,8 @@ class Body extends Component {
 							<div class="card-body custom-card">
 								<h5 class="card-title">HTML</h5>
 								<p class="card-text">
-									HTML is the standard markup language for creating Web
-									pages. HTML stands for Hyper Text Markup Language .
+									HTML is the standard markup language for creating Web pages.
+									HTML stands for Hyper Text Markup Language .
 								</p>
 							</div>
 						</Link>
