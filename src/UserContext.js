@@ -9,7 +9,7 @@ class UserProvider extends Component {
 		password: "",
 		isUserChecked: false,
 		isTutorChecked: false,
-		resState: ""
+		userToken: ""
 	};
 	handleChange = e => {
 		this.setState({
@@ -23,9 +23,9 @@ class UserProvider extends Component {
 	};
 	userLogout = () => {
 		this.setState({
-			resState: "",
 			isUserChecked: false,
-			isTutorChecked: false
+			isTutorChecked: false,
+			userToken: ""
 		});
 	};
 	userLogin = e => {
@@ -34,7 +34,7 @@ class UserProvider extends Component {
 		if (this.state.isUserChecked && !this.state.isTutorChecked) {
 			axios({
 				url:
-					"http://localhost/rest-api-authentication-example/api/user_login.php",
+					"http://localhost/rest-api-authentication-example/api/api/user_login.php",
 				method: "post",
 				data: {
 					email: this.state.email,
@@ -47,16 +47,10 @@ class UserProvider extends Component {
 				.then(res => {
 					console.log(res);
 					console.log(res.data);
-					localStorage.setItem("token", res.data.jwt);
-					const LoggedInState = localStorage.getItem("token");
-					this.setState(
-						{
-							resState: LoggedInState
-						},
-						() => {
-							console.log(this.state);
-						}
-					);
+					this.setState({
+						userToken: res.data.jwt
+					});
+					console.log(this.state.userToken);
 				})
 				.catch(err => console.log(err));
 		}

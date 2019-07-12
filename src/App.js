@@ -1,10 +1,5 @@
-import React, { Component } from "react";
-import {
-	BrowserRouter as Router,
-	Route,
-	Switch,
-	Redirect
-} from "react-router-dom";
+import React, { Component, Fragment } from "react";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import Homepage from "./components/homepage/Homepage";
 import Login from "./components/auth/Login";
@@ -21,95 +16,41 @@ import ErrorPage from "./components/homepage/ErrorPage";
 import AdminDashboard from "./components/adminpanel/AdminDashboard";
 import CreatePost from "./components/adminpanel/CreatePost";
 import AdminPosts from "./components/adminpanel/AdminPosts";
-import { UserProvider, UserConsumer } from "./UserContext";
-import { RegisterProvider } from "./RegisterContext";
 import { AdminProvider, AdminConsumer } from "./AdminContext";
 import "./App.css";
+import Php from "./components/tutorials/php/Php";
+import Nav from "./components/homepage/Nav";
 
 class App extends Component {
 	render() {
 		return (
-			<Router>
-				<Switch>
-					<Route exact path="/" component={Homepage} />
+			<BrowserRouter>
+				<Fragment>
+					<Nav />
+					<Switch>
+						<Route exact path="/" component={Homepage} />
 
-					{/* Login and respective routes for Learner and Tutor */}
-					<UserProvider>
+						{/* Login and respective routes for Learner and Tutor */}
+
 						<Route path="/login" component={Login} />
-						<UserConsumer>
-							{usercontext => (
-								<Route
-									path="/userdashboard"
-									render={() =>
-										usercontext.state.resState ===
-										localStorage.getItem("token") ? (
-											<UserDashboard />
-										) : (
-											<Redirect to="/login" />
-										)
-									}
-								/>
-							)}
-						</UserConsumer>
-
-						<UserConsumer>
-							{usercontext => (
-								<Route
-									path="/tutordashboard"
-									render={() =>
-										usercontext.state.resState === "TUTOR" ? (
-											<UserDashboard />
-										) : (
-											<Redirect to="/login" />
-										)
-									}
-								/>
-							)}
-						</UserConsumer>
+						<Route path="/userdashboard" component={UserDashboard} />
 
 						{/* Common Routes */}
-						<RegisterProvider>
-							<Route path="/register" component={Register} />
-						</RegisterProvider>
+
+						<Route path="/register" component={Register} />
 						<Route path="/tutorials" component={Tutorials} />
 						<Route path="/terms" component={TerAndCon} />
 						<Route path="/contactus" component={ContactUs} />
 						<Route path="/about" component={About} />
 						<Route path="/c" component={CLanguage} />
+						<Route path="/php" component={Php} />
 						<Route path="/javascript" component={JavaScript} />
 
 						{/* Admin Routes */}
 						<AdminProvider>
 							<Route path="/admin" component={AdminLogin} />
-							<AdminConsumer>
-								{admincontext => (
-									<Route
-										path="/admindashboard"
-										render={() =>
-											admincontext.state.isAdminLoggedIn ? (
-												<AdminDashboard />
-											) : (
-												<Redirect to="/admin" />
-											)
-										}
-									/>
-								)}
-							</AdminConsumer>
-
-							<AdminConsumer>
-								{admincontext => (
-									<Route
-										path="/createpost"
-										render={() =>
-											admincontext.state.isAdminLoggedIn ? (
-												<CreatePost />
-											) : (
-												<Redirect to="/admin" />
-											)
-										}
-									/>
-								)}
-							</AdminConsumer>
+							<Route path="/admindashboard" component={AdminDashboard} />
+							<Route path="/createpost" component={CreatePost} />
 
 							<AdminConsumer>
 								{admincontext => (
@@ -126,11 +67,12 @@ class App extends Component {
 								)}
 							</AdminConsumer>
 						</AdminProvider>
-					</UserProvider>
-					{/* 404 */}
-					<Route path="*" component={ErrorPage} />
-				</Switch>
-			</Router>
+
+						{/* 404 */}
+						<Route path="*" component={ErrorPage} />
+					</Switch>
+				</Fragment>
+			</BrowserRouter>
 		);
 	}
 }

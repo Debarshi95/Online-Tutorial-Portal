@@ -10,6 +10,12 @@ import {
 	faEnvelope,
 	faAt
 } from "@fortawesome/free-solid-svg-icons";
+import { UserProvider } from "./UserContext";
 
 library.add(faUser, faKey, faEnvelope, faAt);
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+	<UserProvider>
+		<App />
+	</UserProvider>,
+	document.getElementById("root")
+);

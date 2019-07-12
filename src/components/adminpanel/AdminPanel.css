@@ -16,10 +16,8 @@
 	text-decoration: none;
 	background-size: 22%;
 	height: 40px;
-	background-color: rgb(19, 9, 53);
 	text-align: center;
 	padding-top: 5px;
-	border: 1px solid rgb(12, 2, 43);
 	margin: 2px;
 	border-radius: 3px;
 }
@@ -30,45 +28,17 @@
 }
 .admin-card-main {
 	width: 77.5%;
-	border: 1px solid #b6b3b3;
-	height: 98vh;
+	border: 1px solid #5c5959;
+	height: 99vh;
 	float: right;
 	border-radius: 2px;
 	margin: 5px 3px 0px 2px;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	/* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); */
 }
 
 /* Createpost.js styles */
-.createpost-body {
-	height: 90vh;
-	font-family: "Roboto", sans-serif;
-}
-
-.createpost-card {
-	width: 55%;
-	border: 1px solid #b6b3b3;
-	height: 97vh;
-	float: right;
-	border-radius: 2px;
-	margin: 5px 305px 0px 2px;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	padding: 40px 70px 20px 70px;
-}
-.createpost-top-right-sidebar {
-	float: right !important;
-	width: 21.6% !important;
-	height: 96.6vh !important;
-	padding: 40px 30px 20px 30px !important;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	margin-top: -606px;
-	margin-right: 5px;
-}
-
-.post-text {
-	height: 300px !important;
-}
-.post-submit-btn {
-	width: 90px !important;
+.createpost-body-text {
+	height: 280px !important;
 }
 /* AdminLOG.js */
 .admin-login-body {

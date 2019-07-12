@@ -16,7 +16,7 @@ function UserSidebar() {
 					C
 				</Link>
 
-				<Link to="/" className="Link">
+				<Link to="/php" className="Link">
 					PHP
 				</Link>
 
@@ -25,7 +25,6 @@ function UserSidebar() {
 				</Link>
 			</ul>
 		</div>
-        
 	);
 }
 export default UserSidebar;

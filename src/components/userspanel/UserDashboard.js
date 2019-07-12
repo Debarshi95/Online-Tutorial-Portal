@@ -1,19 +1,22 @@
 import React, { Component } from "react";
-import Nav from "../homepage/Nav";
+import { Redirect } from "react-router-dom";
 import { UserConsumer } from "../../UserContext";
-import UserSidebar from './UserSidebar'; 
-import UserBoard from './UserBoard';
+import UserSidebar from "./UserSidebar";
+import UserBoard from "./UserBoard";
 class UserDashboard extends Component {
 	render() {
 		return (
 			<UserConsumer>
-				{usercontext => (
-					<div>
-						<Nav />
-						<UserSidebar/>
-						<UserBoard />
-					</div>
-				)}
+				{usercontext =>
+					!usercontext.state.userToken ? (
+						<Redirect to="/login" />
+					) : (
+						<div>
+							<UserSidebar />
+							<UserBoard />
+						</div>
+					)
+				}
 			</UserConsumer>
 		);
 	}

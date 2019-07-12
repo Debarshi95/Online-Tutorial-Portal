@@ -37,37 +37,29 @@ export class CreatePost extends Component {
 		return (
 			<div>
 				<AdminDashSidebar />
-				<div className="createpost-card">
-					<form onSubmit={this.handleSubmit}>
-						<div className="form-group">
-							<label>Title</label>
+				<div className="row p-2">
+					<div className="col-12">
+						<form method="post" className="p-5">
+							<label className="font-weight-bold">Title</label>
 							<input
 								type="text"
-								id="title"
+								name="title"
+								placeholder="Title"
 								className="form-control"
-								onChange={this.handleChange}
 							/>
-						</div>
-						<br />
-						<div className="form-group">
-							<label>Content</label>
+							<label className="font-weight-bold mt-2">Body</label>
 							<textarea
-								className="form-control post-text"
-								id="content"
-								onChange={this.handleChange}
+								name="body"
+								placeholder="Body"
+								className="form-control createpost-body-text"
 							/>
-							<br />
-						</div>
-						<input
-							type="submit"
-							value="Post"
-							className="btn btn-dark post-submit-btn"
-						/>
-					</form>
-				</div>
-				<div className="card createpost-top-right-sidebar">
-					<label htmlFor="category">Category</label>
-					<input type="text" className="form-control" />
+							<input
+								type="submit"
+								value="POST"
+								className="btn btn-success mt-4"
+							/>
+						</form>
+					</div>
 				</div>
 			</div>
 		);
